@@ -1,11 +1,18 @@
 import React from 'react'
+import { Link, Outlet } from 'react-router-dom'
 
 const User = () => {
   return (
     <div className='p-10 flex flex-col items-center gap-4'>
       <h1 className='text-3xl font-semibold text-red-500'>User</h1>
-      <p className='w-1/2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, aperiam adipisci error magni perferendis nesciunt facilis repellendus impedit ipsam officiis.</p>
-      <button className='bg-zinc-400 text-zinc-100 px-2 py-2 rounded-md'>Explore More!</button>
+      <div className='flex flex-col text-xl p-3 gap-4 w-[20%]'>
+      
+            <Link className='bg-red-200 hover:bg-red-400 ' to="/user/john">John</Link>
+            <Link className='bg-red-200 hover:bg-red-400 ' to="/user/ayush">Ayush</Link>
+            <Link className='bg-red-200 hover:bg-red-400 ' to="/user/anubhav">Anubhav</Link>
+    </div>
+
+    <Outlet />
     </div>
   )
 }
